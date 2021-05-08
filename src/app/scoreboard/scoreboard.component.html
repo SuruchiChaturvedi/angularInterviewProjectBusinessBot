@@ -1,0 +1,24 @@
+<div class="Major">
+  <div>
+    <p style="font-size:30px;"><strong>ScoreCard v1.0</strong></p>
+  </div>
+
+  <div class="BackgroundClass">
+    <div class="Player">{{player1}}</div>
+    <div class="Player">{{player2}}</div>
+  </div>
+
+  <div class="WinnerText" *ngIf="winner">
+    <p class="Text">Hurray! PLAYER {{winner|uppercase}} won!!</p>
+    <button class="ButtonClass ResetButton" (click)="Reset()">reset</button>
+  </div>
+
+  <div>
+    <button class="ButtonClass" (click)="Inc(1)" [disabled]="winner">Player one</button>
+    <button class="ButtonClass" (click)="Inc(2)" [disabled]="winner">Player two</button>
+  </div>
+
+
+
+
+</div>
